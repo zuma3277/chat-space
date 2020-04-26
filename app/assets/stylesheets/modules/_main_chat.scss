@@ -1,0 +1,113 @@
+.chat_main {
+  height: 100vh;
+  width: calc(100% - 300px);
+  background-color: #fafafa;
+
+  .header {
+    height: 100px;
+    background-color: #ffffff;
+    display: flex;
+    padding: 0 40px;
+    align-items: center;
+    justify-content: space-between;
+    &__left {
+      margin-top: 35px;
+      &__current-group {
+        color: #333333;
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+    }
+    &__member-list {
+      display: flex;
+      font-size: 12px;
+      color: #999999;
+      margin-right: 5px;
+    }
+    &__edit {
+      font-size: 16px;
+      line-height: 40px;
+      border: solid 1px #38aef0;
+      padding: 0 20px;
+      text-decoration: none;
+    }
+  }
+
+  .messages {
+    background-color: #fafafa;
+    height: calc(100vh - 190px);
+    padding: 46px 40px;
+    .message {
+      margin-bottom: 40px;
+      .message-info {
+        display: flex;
+        margin-bottom: 10px;
+          &__talk {
+            color: #434a54;
+            font-size: 16px;
+            font-weight: bold;
+          }
+          &__date {
+            color: #999999;
+            font-size: 12px;
+            margin-left: 10px;
+          }
+      }
+      .message-line {
+        color: #434a54;
+        font-size: 14px;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+
+
+  
+
+
+  .form {
+    background-color: #d2d2d2;
+    height: 90px;
+    padding: 20px 40px;
+
+    form {
+      display: flex;
+    }
+    &__massage {
+      height: 50px;
+      width: 100%;
+      padding: 0 40px 0 10px;
+      color: #434a54;
+      border-style: none;
+    }
+      &__mask {
+      display: flex;
+      width: 100%;
+      position: relative;
+        
+      &__image {
+        font-size: 1.3rem;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+      
+        .hidden {
+          display: none;
+        }
+      }
+    }
+    .form__submit{
+      width: 100px;
+      height: 50px;
+      margin-left: 15px;
+      background-color: #38aef0;
+      color: white;
+      cursor: pointer;
+    }
+     
+  }
+}
+
+

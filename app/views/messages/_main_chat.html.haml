@@ -1,0 +1,29 @@
+.chat_main
+  .header
+    .header__left
+      %h2.header__left__current-group
+        = @group.name
+      %ul.header__member-list
+        Member : 
+        - @group.group_users.each do |group_user|
+          = group_user.user.name
+    = link_to edit_group_path(params[:group_id]), class: "header__edit" do
+      Edit
+  .messages
+    = render @messages
+    .message
+      .message-info
+        %p.message-info__talk
+          zuma
+        %p.message-info__date
+          時間
+      %p.message-line
+        time line
+  .form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+      .form__mask
+        = f.label :image, class: 'form__mask__image' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :image, class: 'hidden'
+      = f.submit 'Send', class: 'form__submit'
