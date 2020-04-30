@@ -11,11 +11,6 @@
       Edit
   .messages
     = render @messages
-    .message
-      .message-info
-        %p.message-info__talk
-        %p.message-info__date
-      %p.message-line
   .form
     = form_for [@group, @message] do |f|
       = f.text_field :content, class: 'form__message', placeholder: 'type a message'
