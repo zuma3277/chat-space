@@ -53,7 +53,7 @@ $('#new_message').on('submit', function(e){
      processData: false,
      contentType: false
    })
-   .done(function(data){
+   .done(function(message){
      var html = buildHTML(message);
      $('.messages').append(html);
      $('form')[0].reset();
